@@ -1,0 +1,68 @@
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center; /* горизонтальное центрирование */
+  align-items: center;     /* вертикальное центрирование */
+  background: #000;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  display: flex;
+  gap: 20px;
+  height: 80vh;
+  width: 100vw;       /* ширина на весь экран */
+  box-sizing: border-box;
+  padding: 0 20px;    /* отступы слева и справа, если нужно */
+   display: flex;
+}
+
+
+/* Остальной CSS для слайдов, как было */
+.slide {
+  flex: 1;
+  border-radius: 20px;
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+  color: #fff;
+  opacity: 0.6;
+  display: flex;
+  align-items: flex-end;
+  padding: 20px;
+  box-sizing: border-box;
+  user-select: none;
+  transition: flex 0.5s ease, opacity 0.5s ease;
+}
+
+.slide.active {
+  flex: 10;
+  opacity: 1;
+}
+
+.slide h3 {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+  margin: 0;
+  font-size: 24px;
+}
+
+.slide.active h3 {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.slider-title {
+  color: #fff;
+  font-size: 28px;
+  text-align: center;
+  margin: 0 0 20px 0;
+  font-weight: 600;
+  user-select: none;
+  font-family: Arial, sans-serif;
+}
